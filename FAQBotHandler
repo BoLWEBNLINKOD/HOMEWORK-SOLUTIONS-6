@@ -1,0 +1,10 @@
+public class FAQBotHandler extends SupportHandler {
+    @Override
+    protected boolean process(String issue) {
+        if (issue.equals("password_reset")) {
+            System.out.println("[FAQBot] Handled password_reset");
+            return true;
+        }
+        return false;
+    }
+}
