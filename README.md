@@ -21,3 +21,20 @@ SeniorSupportHandle
 
 Main
 Это стартовый класс программы. Здесь создаются экземпляры обработчиков: faq, junior и senior. С помощью setNext() они выстраиваются в цепочку: бот → младший → старший. В цикле перебирается массив проблем: "password_reset", "refund_request", "account_ban", "unknown_bug".
+При запуске и комплияций кода вывод будет таким: 
+New Issue: password_reset
+[FAQBot] Handled password_reset
+
+New Issue: refund_request
+[FAQBotHandler] Passed to next handler.
+[JuniorSupport] Handled refund_request
+
+New Issue: account_ban
+[FAQBotHandler] Passed to next handler.
+[JuniorSupportHandler] Passed to next handler.
+[SeniorSupport] Handled account_ban
+
+New Issue: unknown_bug
+[FAQBotHandler] Passed to next handler.
+[JuniorSupportHandler] Passed to next handler.
+[SeniorSupport] Cannot handle unknown_bug — escalate manually.
