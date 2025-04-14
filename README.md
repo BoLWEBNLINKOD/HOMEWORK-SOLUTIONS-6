@@ -38,3 +38,4 @@ New Issue: unknown_bug
 [FAQBotHandler] Passed to next handler.
 [JuniorSupportHandler] Passed to next handler.
 [SeniorSupport] Cannot handle unknown_bug — escalate manually.
+Этот пример показывает что код работает корректно и запросы последовательно идут по цепочке, пока не найдут подходящего обработчика.
