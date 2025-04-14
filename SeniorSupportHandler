@@ -1,0 +1,10 @@
+public class SeniorSupportHandler extends SupportHandler {
+    @Override
+    protected boolean process(String issue) {
+        if (issue.equals("account_ban") || issue.equals("data_loss")) {
+            System.out.println("[SeniorSupport] Handled " + issue);
+            return true;
+        }
+        return false;
+    }
+}
