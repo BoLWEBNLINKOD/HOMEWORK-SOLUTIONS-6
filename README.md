@@ -12,3 +12,9 @@ JuniorSupportHandler
 Это следующий уровень поддержки — младший специалист. В методе process() он проверяет, равен ли запрос строкам "refund_request" или "billing_issue". Если совпадает — специалист обрабатывает проблему и выводит, например:
 [JuniorSupport] Handled refund_request.
 Если не совпадает, запрос передаётся следующему обработчику.
+
+SeniorSupportHandler
+Это старший инженер или специалист техподдержки, который обрабатывает самые сложные и серьёзные проблемы. В методе process() он ищет запросы "account_ban" или "data_loss". Если нашёл — выводит, например:
+[SeniorSupport] Handled account_ban.
+Если проблема ему тоже не знакома — выводится сообщение об эскалации:
+[SeniorSupport] Cannot handle unknown_bug — escalate manually.
