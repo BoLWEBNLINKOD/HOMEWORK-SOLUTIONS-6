@@ -1,0 +1,10 @@
+public class JuniorSupportHandler extends SupportHandler {
+    @Override
+    protected boolean process(String issue) {
+        if (issue.equals("refund_request") || issue.equals("billing_issue")) {
+            System.out.println("[JuniorSupport] Handled " + issue);
+            return true;
+        }
+        return false;
+    }
+}
