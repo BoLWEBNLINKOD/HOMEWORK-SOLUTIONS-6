@@ -1,0 +1,20 @@
+abstract class SupportHandler {
+    protected SupportHandler next;
+
+    public SupportHandler setNext(SupportHandler handler) {
+        this.next = handler;
+        return handler;
+    }
+
+    public void handle(String issue) {
+        if (!process(issue)) {
+            if (next != null) {
+                System.out.println("[" + this.getClass().getSimpleName() + "] Passed to next handler.");
+                next.handle(issue);
+            } else {
+                System.out.println("[" + this.getClass().getSimpleName() + "] Cannot handle " + issue + " — escalate manually.");
+            }
+        }
+    }
+    protected abstract boolean process(String issue);
+}
